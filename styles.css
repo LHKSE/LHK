@@ -1,12 +1,10 @@
 /* styles.css */
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
-    background-image: url('https://i.pinimg.com/736x/e8/ab/83/e8ab83923295950ea0456f39aed9f5f6.jpg');
-    background-size: cover;
-    background-position: center;
+    background: linear-gradient(to bottom right, #141414, #000000); /* Gradient background */
     color: #fff;
 }
 
@@ -43,23 +41,53 @@ nav ul li a:hover {
 
 section {
     text-align: center;
-    padding: 50px 20px;
-    position: relative; /* Add position relative */
-    z-index: 1; /* Set higher z-index to ensure content appears above background */
+    padding: 50px;
+    position: relative;
+    z-index: 1;
+    border-radius: 20px; /* Rounded corners */
+    border: 2px dashed #ffa500; /* Dashed border */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5); /* Box shadow for depth */
 }
 
 section .content {
     max-width: 600px;
     margin: 0 auto;
+    opacity: 0;
+    animation: fadeInUp 1s ease forwards;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 h1 {
-    font-size: 36px;
+    font-size: 48px;
     margin-bottom: 20px;
+    color: #ffa500;
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
 
 p {
-    font-size: 18px;
-    line-height: 1.6;
+    font-size: 20px;
+    line-height: 1.8;
     margin-bottom: 30px;
+    color: #ccc;
+    opacity: 0;
+    animation: fadeInUp 1s ease 0.5s forwards;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    border-left: 4px solid #ffa500;
+    padding-left: 10px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    padding: 20px;
 }
